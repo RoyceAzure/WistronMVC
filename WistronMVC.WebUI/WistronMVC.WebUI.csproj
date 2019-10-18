@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +163,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -179,6 +184,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WIstronMVC.Core\WIstronMVC.Core.csproj">
+      <Project>{4d08b691-df7b-4bbf-ab8d-bba8c7f8ebf9}</Project>
+      <Name>WIstronMVC.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WistronMVC.DataAccess.InMemory\WistronMVC.DataAccess.InMemory.csproj">
+      <Project>{9261205a-b265-4157-a53c-c9622de4e89c}</Project>
+      <Name>WistronMVC.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WistronMVC.DataAccess.SQL\WistronMVC.DataAccess.SQL.csproj">
+      <Project>{5738bb00-2129-4e16-a2b9-3e38af8671a4}</Project>
+      <Name>WistronMVC.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WistronMVC.Services\WistronMVC.Services.csproj">
+      <Project>{27c5320f-10ca-49db-855f-489355120fab}</Project>
+      <Name>WistronMVC.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

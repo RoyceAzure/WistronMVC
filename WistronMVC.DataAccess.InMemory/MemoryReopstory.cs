@@ -13,7 +13,7 @@ namespace WistronMVC.DataAccess.InMemory
         List<T> items;
         string className;
 
-        MemoryReopstory()
+        public MemoryReopstory()
         {
             className = typeof(T).Name;
             items = Cache[className] as List<T>;
@@ -43,7 +43,7 @@ namespace WistronMVC.DataAccess.InMemory
             T item = items.Find(c => c.Id == Id);
             if (item == null)
                 throw new Exception(className + " Not found");
-            return items.Find(c => c.Id == Id); ;
+            return item;
         }
 
         public void Insert(T t)
