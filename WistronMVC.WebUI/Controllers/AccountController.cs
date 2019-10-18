@@ -14,9 +14,9 @@ namespace WistronMVC.WebUI.Controllers
         // GET: Account
         MemoryReopstory<User> context ;
 
-        public AccountController()
+        public AccountController(MemoryReopstory<User> context)
         {
-            context = new MemoryReopstory<User>();
+            this.context = context;
         }
         public ActionResult Index()
         {
@@ -96,6 +96,19 @@ namespace WistronMVC.WebUI.Controllers
                 context.Delete(Id);
                 context.Commit();
                 return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Details( string Id)
+        {
+            User user = context.Find(Id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(user);
             }
         }
     }
