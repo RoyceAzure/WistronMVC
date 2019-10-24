@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WistronMVC.DataAccess.InMemory;
+using WistronMVC.DataAccess.SQL;
 using WIstronMVC.Core.Models;
 
 namespace WistronMVC.WebUI.Controllers
@@ -12,9 +13,9 @@ namespace WistronMVC.WebUI.Controllers
     {
 
         // GET: Account
-        MemoryReopstory<User> context ;
+        SQLRepostory<User> context ;
 
-        public AccountController(MemoryReopstory<User> context)
+        public AccountController(SQLRepostory<User> context)
         {
             this.context = context;
         }

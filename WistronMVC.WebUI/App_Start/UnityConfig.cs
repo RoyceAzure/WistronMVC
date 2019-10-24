@@ -2,6 +2,7 @@ using System;
 
 using Unity;
 using WistronMVC.DataAccess.InMemory;
+using WistronMVC.DataAccess.SQL;
 using WIstronMVC.Core.Contracts;
 using WIstronMVC.Core.Models;
 
@@ -45,7 +46,7 @@ namespace WistronMVC.WebUI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IRepostory<User>, MemoryReopstory<User>>();
+            container.RegisterType<IRepostory<User>, SQLRepostory<User>>();
         }
     }
 }
