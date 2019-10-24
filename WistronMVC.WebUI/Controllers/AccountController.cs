@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using WistronMVC.DataAccess.InMemory;
 using WistronMVC.DataAccess.SQL;
-using WIstronMVC.Core.Models;
+using WistronMVC.Core.Models;
+using System.IO;
 
 namespace WistronMVC.WebUI.Controllers
 {
@@ -30,12 +31,18 @@ namespace WistronMVC.WebUI.Controllers
             return View(user);
         }
         [HttpPost]
-        public ActionResult Create(User user)
+        public ActionResult Create(User user, HttpPostedFileBase file )
         {
             if(!ModelState.IsValid)
             {
                 return View(user);
             }
+            if(file!=null)
+            {
+                user.Image = user.Id + Path.GetExtension(file.FileName);
+                file.SaveAs(Server.MapPath("//Content//UserImages//") + user.Image);
+            }
+
             context.Insert(user);
             context.Commit();
             return RedirectToAction("Index");
@@ -54,7 +61,7 @@ namespace WistronMVC.WebUI.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Edit(User user,string Id)
+        public ActionResult Edit(User user,string Id, HttpPostedFileBase file)
         {
             User userToEdit = context.Find(Id);
             if (userToEdit == null)
@@ -63,6 +70,11 @@ namespace WistronMVC.WebUI.Controllers
             {
                 if (!ModelState.IsValid)
                     return View(user);
+                if(file!=null)
+                {
+                    userToEdit.Image = user.Id + Path.GetExtension(file.FileName);
+                    file.SaveAs(Server.MapPath("//Content//UserImages//") + userToEdit.Image);
+                }
                 userToEdit.Email = user.Email;
                 userToEdit.EnName = user.EnName;
                 userToEdit.MobelPhone = user.MobelPhone;

@@ -190,14 +190,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
-    <Content Include="Views\Account\Create.cshtml" />
-    <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Account\Delete.cshtml" />
     <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\UserImages\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +213,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WIstronMVC.Core\WIstronMVC.Core.csproj">
+    <ProjectReference Include="..\WIstronMVC.Core\WistronMVC.Core.csproj">
       <Project>{4d08b691-df7b-4bbf-ab8d-bba8c7f8ebf9}</Project>
-      <Name>WIstronMVC.Core</Name>
+      <Name>WistronMVC.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\WistronMVC.DataAccess.InMemory\WistronMVC.DataAccess.InMemory.csproj">
       <Project>{9261205a-b265-4157-a53c-c9622de4e89c}</Project>

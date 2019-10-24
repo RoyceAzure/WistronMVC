@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WIstronMVC.Core\WIstronMVC.Core.csproj">
+    <ProjectReference Include="..\WIstronMVC.Core\WistronMVC.Core.csproj">
       <Project>{4d08b691-df7b-4bbf-ab8d-bba8c7f8ebf9}</Project>
-      <Name>WIstronMVC.Core</Name>
+      <Name>WistronMVC.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

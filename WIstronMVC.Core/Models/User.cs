@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WistronMVC.Core.Models;
 
-namespace WIstronMVC.Core.Models
+namespace WistronMVC.Core.Models
 {
 
         public class User : BaseUser
@@ -44,6 +44,7 @@ namespace WIstronMVC.Core.Models
             [Display(Name = "辦公電話")]
             public string TelPhone { get; set; }
 
+            public string Image { get; set; }
             public User() : base()
             {
 

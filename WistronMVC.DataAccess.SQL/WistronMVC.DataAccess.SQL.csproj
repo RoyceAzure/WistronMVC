@@ -52,9 +52,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WIstronMVC.Core\WIstronMVC.Core.csproj">
+    <ProjectReference Include="..\WIstronMVC.Core\WistronMVC.Core.csproj">
       <Project>{4D08B691-DF7B-4BBF-AB8D-BBA8C7F8EBF9}</Project>
-      <Name>WIstronMVC.Core</Name>
+      <Name>WistronMVC.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

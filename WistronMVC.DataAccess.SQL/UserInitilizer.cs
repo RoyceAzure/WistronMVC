@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-using WIstronMVC.Core.Models;
+using WistronMVC.Core.Models;
 
 namespace WistronMVC.DataAccess.SQL
 {

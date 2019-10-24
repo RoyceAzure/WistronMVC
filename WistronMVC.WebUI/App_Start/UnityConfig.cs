@@ -3,8 +3,8 @@ using System;
 using Unity;
 using WistronMVC.DataAccess.InMemory;
 using WistronMVC.DataAccess.SQL;
-using WIstronMVC.Core.Contracts;
-using WIstronMVC.Core.Models;
+using WistronMVC.Core.Contracts;
+using WistronMVC.Core.Models;
 
 namespace WistronMVC.WebUI
 {

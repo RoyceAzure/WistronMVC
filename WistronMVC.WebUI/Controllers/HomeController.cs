@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WistronMVC.DataAccess.SQL;
+using WistronMVC.Core.Models;
 
 namespace WistronMVC.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+
+        SQLRepostory<User> context;
+
+        public HomeController(SQLRepostory<User> context)
+        {
+            this.context = context;
+        }
         public ActionResult Index()
         {
-            return View();
+            List<User> Users = context.Collection().ToList();
+            return View(Users);
         }
 
         public ActionResult About()

@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using WIstronMVC.Core.Models;
+using WistronMVC.Core.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;

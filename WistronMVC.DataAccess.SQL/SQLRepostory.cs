@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 using WistronMVC.Core.Models;
-using WIstronMVC.Core.Contracts;
+using WistronMVC.Core.Contracts;
 
 namespace WistronMVC.DataAccess.SQL
 {

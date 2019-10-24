@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
 using WistronMVC.Core.Models;
-using WIstronMVC.Core.Contracts;
+using WistronMVC.Core.Contracts;
 
 namespace WistronMVC.DataAccess.InMemory
 {

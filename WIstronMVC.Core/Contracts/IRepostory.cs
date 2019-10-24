@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WistronMVC.Core.Models;
 
-namespace WIstronMVC.Core.Contracts
+namespace WistronMVC.Core.Contracts
 {
     public interface IRepostory<T> where T :BaseUser
     {
